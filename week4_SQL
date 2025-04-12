@@ -1,18 +1,16 @@
-//UNION 키워드
-mysql> SELECT * FROM sample71_a
-    -> UNION				  	 //각 SELECT 결과를 합집합 계산하여 최종 결과 반환
-    -> SELECT * FROM sample71_b; //세미콜론은 마지막에만
+# UNION 키워드
+SELECT * FROM sample71_a UNION SELECT * FROM sample71_b;
 
-//열 별명 지정해 UNION 이후 정렬
-mysql> SELECT a AS c FROM sample71_a
-    -> UNION
-    -> SELECT b AS c FROM sample71_b ORDER BY c;
+# 열 별명 지정해 UNION 이후 정렬
+SELECT a AS c FROM sample71_a
+UNION
+SELECT b AS c FROM sample71_b ORDER BY c;
 
-//UNION ALL
-mysql> SELECT * FROM sample71_a
-    -> UNION ALL
-    -> SELECT * FROM sample71_b;
+# UNION ALL
+SELECT * FROM sample71_a
+UNION ALL
+SELECT * FROM sample71_b;
 
-//교차결합으로 곱집합 구하기
-mysql> SELECT * FROM sample72_x, sample72_y;
+# 교차결합으로 곱집합 구하기
+SELECT * FROM sample72_x, sample72_y;
 
