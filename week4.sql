@@ -1,16 +1,18 @@
-# UNION 키워드
-SELECT * FROM sample71_a UNION SELECT * FROM sample71_b;
+-- UNION 키워드
+SELECT * FROM sample71_a
+UNION
+SELECT * FROM sample71_b;
 
-# 열 별명 지정해 UNION 이후 정렬
+-- 열 별명 지정해 UNION 이후 정렬
 SELECT a AS c FROM sample71_a
 UNION
 SELECT b AS c FROM sample71_b ORDER BY c;
 
-# UNION ALL
+-- UNION ALL
 SELECT * FROM sample71_a
 UNION ALL
 SELECT * FROM sample71_b;
 
-# 교차결합으로 곱집합 구하기
+-- 교차결합으로 곱집합 구하기
 SELECT * FROM sample72_x, sample72_y;
 
